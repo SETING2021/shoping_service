@@ -9,17 +9,23 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(description ="Product Model")
 @Entity
 @Table(name ="product")
 public class Product {
 	
-	
+	@ApiModelProperty(notes = "ID of the Product", name = "id", required = true, value = "234567")
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
 	
-	
+	@ApiModelProperty(notes = "NAME of the Product", name = "name", required = true, value = "Sergio")
     private  String name;
+	
+	@ApiModelProperty(notes = "PRICE of the Product", name = "price", required = true, value = "100.00")
     private  Double price;
 
     public Product() {
