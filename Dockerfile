@@ -22,6 +22,6 @@ ENTRYPOINT ["java", "-jar", "/usr/local/lib/shoping_service.jar"]
 # Package stage
 #
 #FROM openjdk:8-jdk-slim
-#COPY "./target/demo-0.0.1-SNAPSHOT.jar" "demo-dockerized.jar"
+#COPY "./target/shoping_service-0.0.1-SNAPSHOT.jar" "shoping_service.jar"
 #EXPOSE 8080
-#ENTRYPOINT ["java", "-jar", "demo-dockerized.jar"]
+#ENTRYPOINT ["java", "-jar", "shoping_service.jar"]
